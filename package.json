@@ -1,0 +1,19 @@
+{
+  "name": "claude-workshop-starter",
+  "version": "1.0.0",
+  "description": "A mini enterprise project for Claude Code workshop — includes modern services, legacy code, and deliberate bugs for hands-on learning.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node tests/run-all.js"
+  },
+  "keywords": [
+    "claude-code",
+    "workshop",
+    "ai-engineering"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
