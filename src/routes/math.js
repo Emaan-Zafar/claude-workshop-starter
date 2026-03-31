@@ -34,7 +34,9 @@ router.get('/divide', (req, res) => {
   if (!checkB.valid) return res.status(400).json({ error: `param b: ${checkB.reason}` });
   const b = parseFloat(req.query.b);
   if (b === 0) return res.status(400).json({ error: 'division by zero is not allowed' });
-  res.json({ result: divide(parseFloat(req.query.a), b) });
+  const result = divide(parseFloat(req.query.a), b);
+  if (!Number.isFinite(result)) return res.status(400).json({ error: 'result is not a finite number' });
+  res.json({ result });
 });
 
 module.exports = router;

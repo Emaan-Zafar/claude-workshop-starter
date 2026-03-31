@@ -15,6 +15,10 @@ assert(multiply(0, 100) === 0, 'multiply(0, 100) should equal 0');
 
 assert(divide(10, 2) === 5, 'divide(10, 2) should equal 5');
 assert(divide(7, 2) === 3.5, 'divide(7, 2) should equal 3.5');
+assert(divide(0, 5) === 0, 'divide(0, 5) should equal 0');
+assert(divide(-10, 2) === -5, 'divide(-10, 2) should equal -5');
+assert(divide(10, -2) === -5, 'divide(10, -2) should equal -5');
+assert(Number.isFinite(divide(1e154, 1e154)), 'divide(1e154, 1e154) should be finite');
 
 // --- Validation tests ---
 
